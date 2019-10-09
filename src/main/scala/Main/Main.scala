@@ -3,19 +3,14 @@ package Main
 import GeometricShapes.{Circle, Square}
 
 object Main {
-  /**
-   *
-   * @param args
-   */
   def main(args: Array[String]): Unit = {
-
-    print("Introduce radius: ")
-    val radius = scala.io.StdIn.readInt()
-
-    val circle = new Circle(radius)
-    val square = new Square(6, 4)
-
-    circle.show()
-    square.show()
+    var op = 0
+    do {
+       op = Utils.menu()
+      if (op == 1) Utils.createCircle
+      else if (op == 2) Utils.createSquare()
+      else if (op == 3) Utils.createTriangle()
+      else if (op == -1) println("ERROR: Option have to be Int")
+    } while (op != 0)
   }
 }

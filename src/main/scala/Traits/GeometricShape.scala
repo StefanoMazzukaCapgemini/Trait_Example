@@ -5,7 +5,7 @@ trait GeometricShape {
    *
    * @return Value of area
    */
-  def area(): Double
+  def area(): Int
 
   /**
    *
