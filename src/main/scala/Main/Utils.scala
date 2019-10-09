@@ -4,6 +4,10 @@ import GeometricShapes.{Circle, Square, Triangle}
 import Traits.GeometricShape
 
 object Utils {
+  /**
+   * Display the menu
+   * @return option selected
+   */
   def menu(): Int = {
     println("╔════════════════════╗")
     println("║        MENU        ║")
@@ -18,6 +22,9 @@ object Utils {
     scala.io.StdIn.readInt()
   }
 
+  /**
+   * Create a circle
+   */
   def createCircle(): Unit = {
     print("Introduce radius: ")
     val circle = new Circle(scala.io.StdIn.readInt())
@@ -25,6 +32,9 @@ object Utils {
     showData(circle)
   }
 
+  /**
+   * Create a square
+   */
   def createSquare(): Unit = {
     print("Introduce base: ")
     val square = new Square(scala.io.StdIn.readInt())
@@ -32,6 +42,9 @@ object Utils {
     showData(square)
   }
 
+  /**
+   * Create a triangle
+   */
   def createTriangle(): Unit = {
     print("Introduce base: ")
     val base = scala.io.StdIn.readInt()
@@ -42,6 +55,10 @@ object Utils {
     showData(triangle)
   }
 
+  /**
+   * Show the data of a specific geometric shape
+   * @param geometricShapes Geometric shape
+   */
   def showData(geometricShapes: GeometricShape): Unit = {
     geometricShapes.show()
     println("Area: " + geometricShapes.area)
