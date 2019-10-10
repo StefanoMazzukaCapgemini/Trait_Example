@@ -3,6 +3,9 @@ package Main
 import GeometricShapes.{Circle, Square, Triangle}
 import Traits.GeometricShape
 
+/**
+ * @author Stefano Mazzuka
+ */
 object Utils {
   /**
    * Display the menu
